@@ -1,10 +1,11 @@
 require.config({
 	paths: {
-		'jquery':         'lib/jquery/jquery-1.7.1',
-		'jqueryui':       'lib/jqueryui',
-		'underscore':     'lib/underscore/underscore',
-		'text':           'lib/require/text',
-		'backbone':       'lib/backbone/backbone'
+		'jquery':         '../assets/javascript/lib/jquery/jquery',
+		'underscore':     '../assets/javascript/lib/underscore/underscore',
+		'backbone':       '../assets/javascript/lib/backbone/backbone',
+
+		'text':           '../assets/javascript/lib/require/text',
+		'templates': 	  '../app/templates'
 	},
 	shim: {
 		'backbone': {
@@ -13,3 +14,13 @@ require.config({
 		},
 	}
 });
+
+require([
+	'router',
+	'views/appView'
+], function(AppRouter, AppView) {
+	AppRouter.initialize();
+	var appView = new AppView();
+	console.log(appView);
+});
+
