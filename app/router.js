@@ -10,9 +10,6 @@ define([
 		},
 
 		index: function(){
-			console.log('AppRouter');
-
-
 		},
 
 
@@ -21,7 +18,7 @@ define([
 	var initialize = function() {
 		var router;
 		router = new AppRouter();
-		//pass router
+		console.log('AppRouter Initialize');
 		Backbone.history.start();
 	}
 

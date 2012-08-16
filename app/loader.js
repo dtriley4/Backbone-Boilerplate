@@ -1,7 +1,7 @@
 require.config({
 	paths: {
 		'jquery':         '../assets/javascript/lib/jquery/jquery',
-		'underscore':     '../assets/javascript/lib/underscore/underscore',
+		'underscore':     '../assets/javascript/lib/underscore/underscore-min',
 		'backbone':       '../assets/javascript/lib/backbone/backbone',
 
 		'text':           '../assets/javascript/lib/require/text',
@@ -21,6 +21,6 @@ require([
 ], function(AppRouter, AppView) {
 	AppRouter.initialize();
 	var appView = new AppView();
-	console.log(appView);
+	appView.render();
 });
 

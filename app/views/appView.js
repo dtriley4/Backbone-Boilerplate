@@ -3,11 +3,11 @@ define([
        'underscore',
        'backbone',
        'text!templates/appTemplate.html'
-], function($, _, Backbone, appTemplate){
-	var appView = Backbone.View.extend({
+], function($, _, Backbone, AppTemplate){
+	var AppView = Backbone.View.extend({
 		el: '#main',
 		
-		//template: _.template(appTemplate),
+		template: _.template(AppTemplate),
 
 
 		events:{
@@ -15,6 +15,7 @@ define([
 		},
 
 		initialize: function(){
+			console.log(this.$el);
 		},
 
 		render: function(){
@@ -30,5 +31,5 @@ define([
 
 	});
 
-	return appView;
+	return AppView;
 });
